@@ -12,4 +12,6 @@ RUN apk --no-cache add \
 
 COPY rootfs/ /
 
+EXPOSE 80
+
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
