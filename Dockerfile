@@ -11,6 +11,7 @@ RUN apk --no-cache add \
     mkdir /etc/supervisor.d/
 
 COPY rootfs/ /
+RUN chown -R www-data:www-data /var/lib/nginx
 
 EXPOSE 80
 
