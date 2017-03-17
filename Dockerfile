@@ -8,11 +8,10 @@ RUN apk --no-cache add \
     ln -sf /dev/stderr /var/log/nginx/error.log && \
     rm -rf /var/lib/nginx/tmp && \
     ln -sf /tmp /var/lib/nginx/tmp && \
-    mkdir /etc/supervisor.d/
+    mkdir /etc/supervisor.d/ && \
+    chown -R www-data:www-data /var/lib/nginx
 
 COPY rootfs/ /
-RUN chown -R www-data:www-data /var/lib/nginx
-
 EXPOSE 80
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
