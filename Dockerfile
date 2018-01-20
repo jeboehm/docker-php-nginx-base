@@ -1,5 +1,7 @@
-FROM jeboehm/php-base:latest
-MAINTAINER Jeffrey Boehm "jeff@ressourcenkonflikt.de"
+ARG PHP_VER=7.1
+
+FROM jeboehm/php-base:${PHP_VER}
+LABEL maintainer="jeff@ressourcenkonflikt.de"
 
 RUN apk --no-cache add \
       nginx \
