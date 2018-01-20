@@ -1,4 +1,4 @@
-ARG PHP_VER=7.1
+ARG PHP_VER=7.2
 
 FROM jeboehm/php-base:${PHP_VER}
 LABEL maintainer="jeff@ressourcenkonflikt.de"
