@@ -11,6 +11,7 @@ RUN apk --no-cache add \
     rm -rf /var/lib/nginx/tmp && \
     ln -sf /tmp /var/lib/nginx/tmp && \
     mkdir /etc/supervisor.d/ && \
+    rm -f /etc/nginx/conf.d/default.conf && \
     chown -R www-data:www-data /var/lib/nginx
 
 COPY rootfs/ /
