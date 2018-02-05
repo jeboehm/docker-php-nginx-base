@@ -1,0 +1,10 @@
+{
+  "require": {
+    "phpunit/phpunit": "@stable",
+    "symfony/process": "@stable",
+    "guzzlehttp/guzzle": "@stable"
+  },
+  "scripts": {
+    "test": "phpunit src/"
+  }
+}
