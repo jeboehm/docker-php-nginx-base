@@ -8,7 +8,6 @@ RUN apk --no-cache add \
       supervisor && \
     ln -sf /dev/stdout /var/log/nginx/access.log && \
     ln -sf /dev/stderr /var/log/nginx/error.log && \
-    mkdir /etc/supervisor.d/ && \
     rm -f /etc/nginx/conf.d/default.conf && \
     chown -R www-data:www-data /var/lib/nginx /var/tmp/nginx
 
