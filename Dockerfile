@@ -9,7 +9,8 @@ RUN apk --no-cache add \
     ln -sf /dev/stdout /var/log/nginx/access.log && \
     ln -sf /dev/stderr /var/log/nginx/error.log && \
     rm -f /etc/nginx/conf.d/default.conf && \
-    chown -R www-data:www-data /var/lib/nginx /var/tmp/nginx
+    chown www-data:www-data /var/tmp/nginx /var/lib/nginx && \
+    mkdir /run/nginx
 
 COPY rootfs/ /
 EXPOSE 80
