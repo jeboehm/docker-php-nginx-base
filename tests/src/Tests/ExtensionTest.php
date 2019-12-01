@@ -12,12 +12,15 @@ class ExtensionTest extends TestCase
         'curl',
         'ftp',
         'gd',
+        'imagick',
         'intl',
         'openssl',
+        'pcre',
         'PDO',
         'pdo_mysql',
         'pdo_sqlite',
         'redis',
+        'Zend OPcache',
         'zip',
     ];
 
