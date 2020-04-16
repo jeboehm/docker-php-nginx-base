@@ -8,9 +8,7 @@ RUN apk --no-cache add \
       supervisor && \
     ln -sf /dev/stdout /var/log/nginx/access.log && \
     ln -sf /dev/stderr /var/log/nginx/error.log && \
-    rm -f /etc/nginx/conf.d/default.conf && \
-    chown www-data:www-data /var/tmp/nginx /var/lib/nginx && \
-    mkdir /run/nginx
+    rm -f /etc/nginx/conf.d/default.conf
 
 COPY rootfs/ /
 EXPOSE 80
